@@ -1,0 +1,57 @@
+---
+title: "R Programming and Tidyverse"
+author: "Muhammad Aziz Muslim"
+date: "2023-05-21"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Bulleted List
+- Item 1
+  - Sub-item A
+  - Sub-item B
+- Item 2
+- Item 3
+
+# Numbered List
+1. First item
+2. Second item
+3. Third item
+
+# Italics and Bold
+Some *italicized* words and **bold** words.
+
+## Header Level 2
+
+### Header Level 3
+
+# Results without code
+```{r, echo=FALSE}
+results <- 2 + 2
+results
+
+```
+
+# Creating Table with 3 columns 3 rows using characters
+```{r echo=FALSE, results='asis'}
+library(knitr)
+table.data <- data.frame(City = c("Tokyo", "Vienna", "Beijing"), 
+                         Country = c("Japan", "Austria", "China"), 
+                         Continent = c("Asia", "Europe", "Asia"))
+kable(table.data, caption = "Top three beautiful city")
+```
+
+# Creating plot with code included
+```{r}
+plot(x = 1:5, y = 1:5)
+```
+# Session Info
+```{r}
+sessionInfo()
+```
+
+# Execution of Rmarkdwon file
+rmarkdown::render("MuhammadAzizMuslim_Week1_Rprogramming.Rmd")
