@@ -52,4 +52,19 @@ mtcars <- structure(list(mpg = c(21, 21, 22.8, 21.4, 18.7, 18.1, 14.3,
                                                                                                                                                                                                                                                      "Camaro Z28", "Pontiac Firebird", "Fiat X1-9", "Porsche 914-2", 
                                                                                                                                                                                                                                                      "Lotus Europa", "Ford Pantera L", "Ferrari Dino", "Maserati Bora", 
                                                                                                                                                                                                                                                      "Volvo 142E"), class = "data.frame")  
-mtcars
+# Generate a plot
+plot(x = 1:10, y = 1:10, type = "l", main = "Example Plot")
+
+# Save the plot as a PNG file
+savePlot(filename = "mtcars", type = "png")
+
+mtcars.plot <- ggplot(mtcars, aes(x = mpg, y = wt)) +
+  geom_point()
+mtcars.plot
+
+ggsave("mtcars.png", mtcars.plot)
+
+getwd()
+
+library(knitr)
+
